@@ -35,7 +35,7 @@ A last key goal is to separate logic from configuration in the module, thereby e
 
 | Name | Type |
 | :-- | :-- |
-| [azurerm_private_endpoint.endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) | resource |
+| [azurerm_private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) | resource |
 
 ## Inputs
 
