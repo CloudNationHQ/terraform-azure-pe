@@ -5,7 +5,7 @@ This example illustrates the default private endpoint setup, in its simplest for
 ```hcl
 module "privatelink" {
   source  = "cloudnationhq/pe/azure"
-  version = "~> 0.1"
+  version = "~> 0.2"
 
   resourcegroup = module.rg.groups.demo.name
   location      = module.rg.groups.demo.location
