@@ -16,7 +16,7 @@ locals {
       private_dns_zone_ids           = [module.private_dns.zones.blob.id]
       subresource_names              = ["blob"]
       ip_configurations = {
-        vault = {
+        blob = {
           name               = "blob"
           subresource_name   = "blob"
           private_ip_address = "10.19.1.6"

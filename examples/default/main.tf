@@ -46,6 +46,8 @@ module "storage" {
     name          = module.naming.storage_account.name_unique
     location      = module.rg.groups.demo.location
     resourcegroup = module.rg.groups.demo.name
+
+    public_network_access_enabled = false
   }
 }
 
@@ -56,8 +58,8 @@ module "private_dns" {
   resourcegroup = module.rg.groups.demo.name
 
   zones = {
-    vault = {
-      name = "privatelink.vaultcore.azure.net"
+    blob = {
+      name = "privatelink.blob.core.windows.net"
       virtual_network_links = {
         link1 = {
           virtual_network_id = module.network.vnet.id
@@ -67,12 +69,20 @@ module "private_dns" {
   }
 }
 
-module "private_endpoint" {
+module "privatelink" {
   source  = "cloudnationhq/pe/azure"
   version = "~> 0.1"
 
   resourcegroup = module.rg.groups.demo.name
   location      = module.rg.groups.demo.location
 
-  endpoints = local.endpoints
+  endpoints = {
+    blob = {
+      name                           = module.naming.private_endpoint.name
+      subnet_id                      = module.network.subnets.sn1.id
+      private_connection_resource_id = module.storage.account.id
+      private_dns_zone_ids           = [module.private_dns.zones.blob.id]
+      subresource_names              = ["blob"]
+    }
+  }
 }
