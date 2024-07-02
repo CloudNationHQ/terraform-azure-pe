@@ -5,7 +5,7 @@ This example illustrates the configuration of static ip addresses for private en
 ```hcl
 module "private_endpoint" {
   source  = "cloudnationhq/pe/azure"
-  version = "~> 0.2"
+  version = "~> 0.3"
 
   resourcegroup = module.rg.groups.demo.name
   location      = module.rg.groups.demo.location
