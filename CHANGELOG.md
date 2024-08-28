@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v0.3.0...v0.4.0) (2024-08-28)
+
+
+### Features
+
+* update documentation ([#9](https://github.com/CloudNationHQ/terraform-azure-pe/issues/9)) ([0368b16](https://github.com/CloudNationHQ/terraform-azure-pe/commit/0368b16e47f6b499109231374c0aac27bfdcf085))
+
 ## [0.3.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v0.2.0...v0.3.0) (2024-07-02)
 
 
