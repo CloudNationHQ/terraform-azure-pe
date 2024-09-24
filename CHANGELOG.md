@@ -5,11 +5,19 @@
 
 ### ⚠ BREAKING CHANGES
 
-* * Version 4 of the azurerm provider includes breaking changes.
+* Version 4 of the azurerm provider includes breaking changes.
 
 ### Features
 
 * upgrade azurerm provder to v4 ([#12](https://github.com/CloudNationHQ/terraform-azure-pe/issues/12)) ([a0b0dd8](https://github.com/CloudNationHQ/terraform-azure-pe/commit/a0b0dd85b50af9ca57d0c1de5864b70d29e1b1eb))
+
+### Upgrade from v0.4.0 to v1.0.0:
+
+- Update module reference to: `version = "~> 1.0"`
+- Rename properties in endpoints object:
+  - resourcegroup -> resource_group
+- Rename variable:
+  - resourcegroup -> resource_group
 
 ## [0.4.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v0.3.0...v0.4.0) (2024-08-28)
 
