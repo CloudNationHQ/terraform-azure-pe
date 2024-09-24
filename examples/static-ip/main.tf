@@ -73,7 +73,7 @@ module "private_endpoint" {
   version = "~> 1.0"
 
   resource_group = module.rg.groups.demo.name
-  location      = module.rg.groups.demo.location
+  location       = module.rg.groups.demo.location
 
   endpoints = local.endpoints
 }
