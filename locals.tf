@@ -3,7 +3,6 @@ locals {
     for k, v in var.endpoints : k => {
       name                          = v.name
       location                      = var.location
-      resourcegroup                 = var.resourcegroup
       subnet_id                     = v.subnet_id
       custom_network_interface_name = try(v.custom_network_interface_name, null)
       private_dns_zone_ids          = try(v.private_dns_zone_ids, [])
