@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.0.0...v1.1.0) (2024-10-11)
+
+
+### Features
+
+* auto generated docs and refine makefile ([#15](https://github.com/CloudNationHQ/terraform-azure-pe/issues/15)) ([205c55d](https://github.com/CloudNationHQ/terraform-azure-pe/commit/205c55df62a6109c8c87fe371d06748b55f6cd0b))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#14](https://github.com/CloudNationHQ/terraform-azure-pe/issues/14)) ([ac1a563](https://github.com/CloudNationHQ/terraform-azure-pe/commit/ac1a56389c0011b56c1dcd5b8e401047bd7899bb))
+
 ## [1.0.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v0.4.0...v1.0.0) (2024-09-24)
 
 
