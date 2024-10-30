@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.1.2...v1.1.3) (2024-10-30)
+
+
+### Bug Fixes
+
+* fix locals to include request message ([#21](https://github.com/CloudNationHQ/terraform-azure-pe/issues/21)) ([d1e252e](https://github.com/CloudNationHQ/terraform-azure-pe/commit/d1e252ef8ce0d2e52e97f43e4e9bb139c2ca6752))
+
 ## [1.1.2](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.1.1...v1.1.2) (2024-10-30)
 
 
