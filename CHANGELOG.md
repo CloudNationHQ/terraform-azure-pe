@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.1.1...v1.1.2) (2024-10-30)
+
+
+### Bug Fixes
+
+* add request message parameter to private service connection ([#19](https://github.com/CloudNationHQ/terraform-azure-pe/issues/19)) ([68165c2](https://github.com/CloudNationHQ/terraform-azure-pe/commit/68165c2096feac9e4b67a91ff04fb1fc49206d3f))
+
 ## [1.1.1](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.1.0...v1.1.1) (2024-10-30)
 
 
