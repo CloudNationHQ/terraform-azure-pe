@@ -11,7 +11,7 @@ resource "azurerm_private_endpoint" "endpoint" {
 
   private_service_connection {
     name                              = each.value.private_service_connection.name
-    is_manual_connection              = try(each.value.is_manual_connection, false)
+    is_manual_connection              = try(each.value.private_service_connection.is_manual_connection, false)
     private_connection_resource_id    = each.value.private_service_connection.private_connection_resource_id
     subresource_names                 = each.value.private_service_connection.subresource_names
     private_connection_resource_alias = try(each.value.private_connection_resource_alias, null)
