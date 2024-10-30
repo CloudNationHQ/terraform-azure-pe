@@ -15,6 +15,7 @@ locals {
         private_connection_resource_id    = v.private_connection_resource_id
         subresource_names                 = v.subresource_names
         private_connection_resource_alias = try(v.private_connection_resource_alias, null)
+        request_message                   = try(v.request_message, null)
       }
     }
   }
