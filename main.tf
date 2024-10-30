@@ -15,6 +15,7 @@ resource "azurerm_private_endpoint" "endpoint" {
     private_connection_resource_id    = each.value.private_service_connection.private_connection_resource_id
     subresource_names                 = each.value.private_service_connection.subresource_names
     private_connection_resource_alias = try(each.value.private_connection_resource_alias, null)
+    request_message                   = try(each.value.private_service_connection.request_message, null)
   }
 
   dynamic "private_dns_zone_group" {
