@@ -4,7 +4,7 @@ resource "azurerm_private_endpoint" "endpoint" {
     for k, v in var.endpoints : k => merge(v, {
       location             = var.location
       private_dns_zone_ids = try(v.private_dns_zone_ids, [])
-      tags                 = try(v.tags, {})
+      tags                 = try(v.tags, var.tags, {})
       ip_configurations    = try(v.ip_configurations, {})
     })
   }
