@@ -29,7 +29,7 @@ resource "azurerm_private_endpoint" "endpoint" {
     for_each = length(each.value.private_dns_zone_ids) > 0 ? [1] : []
 
     content {
-      name                 = "default"
+      name                 = try(each.value.private_dns_zone_group_name, "default")
       private_dns_zone_ids = each.value.private_dns_zone_ids
     }
   }
