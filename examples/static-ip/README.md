@@ -1,39 +1,23 @@
-This example illustrates the configuration of static ip addresses for private endpoints
+# Static Ip
 
-## Usage
+This deploys the configuration for static ip addresses for private endpoints
 
-```hcl
-module "private_endpoint" {
-  source  = "cloudnationhq/pe/azure"
-  version = "~> 0.3"
-
-  resourcegroup = module.rg.groups.demo.name
-  location      = module.rg.groups.demo.location
-
-  endpoints = local.endpoints
-}
-```
-
-The module uses the below locals for configuration:
+## Types
 
 ```hcl
-locals {
-  endpoints = {
-    blob = {
-      name                           = module.naming.private_endpoint.name
-      subnet_id                      = module.network.subnets.sn1.id
-      private_connection_resource_id = azurerm_storage_account.sa.id
-      private_dns_zone_ids           = [module.private_dns.zones.blob.id]
-      subresource_names              = ["blob"]
-      ip_configurations = {
-        vault = {
-          name               = "blob"
-          subresource_name   = "blob"
-          private_ip_address = "10.19.1.6"
-          member_name        = "default"
-        }
-      }
-    }
-  }
-}
+resource_group = string
+location       = string
+endpoints = map(object({
+  name                           = string
+  subnet_id                      = string
+  private_connection_resource_id = string
+  private_dns_zone_ids           = list(string)
+  subresource_names              = list(string)
+  ip_configurations = optional(map(object({
+    name               = string
+    private_ip_address = string
+    subresource_name   = string
+    member_name        = string
+  })))
+}))
 ```
