@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.0...v1.4.1) (2025-01-20)
+
+
+### Bug Fixes
+
+* Make location optional on main level ([#33](https://github.com/CloudNationHQ/terraform-azure-pe/issues/33)) ([8e0e585](https://github.com/CloudNationHQ/terraform-azure-pe/commit/8e0e585ff79b887b75538c46b6dc7adb815e9ed5))
+
 ## [1.4.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.3.0...v1.4.0) (2025-01-20)
 
 
