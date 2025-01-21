@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.1...v1.4.2) (2025-01-21)
+
+
+### Bug Fixes
+
+* fix coalesce functions for reseourcegroup and location ([#35](https://github.com/CloudNationHQ/terraform-azure-pe/issues/35)) ([9055443](https://github.com/CloudNationHQ/terraform-azure-pe/commit/9055443cd0fb5d9aa02e271120f4ca91b6b8001d))
+
 ## [1.4.1](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.0...v1.4.1) (2025-01-20)
 
 
