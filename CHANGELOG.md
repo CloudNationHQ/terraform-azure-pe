@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.2...v1.4.3) (2025-01-28)
+
+
+### Bug Fixes
+
+* the private_connection_resource_id  is an optional value ([#37](https://github.com/CloudNationHQ/terraform-azure-pe/issues/37)) ([787ce12](https://github.com/CloudNationHQ/terraform-azure-pe/commit/787ce12bd7a526712ad0c0b57990ed5ae211d27f))
+
 ## [1.4.2](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.1...v1.4.2) (2025-01-21)
 
 
