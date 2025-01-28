@@ -2,7 +2,8 @@
 resource "azurerm_private_endpoint" "endpoint" {
   for_each = {
     for k, v in var.endpoints : k => merge(v, {
-      location             = var.location
+      location             = try(v.location, var.location)
+      resource_group_name  = try(v.resource_group, var.resource_group)
       private_dns_zone_ids = try(v.private_dns_zone_ids, [])
       tags                 = try(v.tags, var.tags, {})
       ip_configurations    = try(v.ip_configurations, {})
@@ -10,7 +11,7 @@ resource "azurerm_private_endpoint" "endpoint" {
   }
 
   name                          = each.value.name
-  resource_group_name           = coalesce(lookup(var.endpoints, "resource_group", null), var.resource_group)
+  resource_group_name           = each.value.resource_group_name
   location                      = each.value.location
   subnet_id                     = each.value.subnet_id
   custom_network_interface_name = try(each.value.custom_network_interface_name, null)
