@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.4](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.3...v1.4.4) (2025-01-30)
+
+
+### Bug Fixes
+
+* make subresource names property optional ([#40](https://github.com/CloudNationHQ/terraform-azure-pe/issues/40)) ([dd63dac](https://github.com/CloudNationHQ/terraform-azure-pe/commit/dd63dacb688a3fbebe3b209d1ed81bc50e9e3833))
+
 ## [1.4.3](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.2...v1.4.3) (2025-01-28)
 
 
