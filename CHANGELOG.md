@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.4...v1.5.0) (2025-03-14)
+
+
+### Features
+
+* **deps:** bump golang.org/x/net from 0.33.0 to 0.36.0 in /tests ([#43](https://github.com/CloudNationHQ/terraform-azure-pe/issues/43)) ([346ab83](https://github.com/CloudNationHQ/terraform-azure-pe/commit/346ab83839f5cc649bbd49666fe6216fd2fb56c3))
+
 ## [1.4.4](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.3...v1.4.4) (2025-01-30)
 
 
