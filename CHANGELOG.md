@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.4...v2.0.0) (2025-06-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* The data structure changed, causing a recreate on existing resources.
+
+### Features
+
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#47](https://github.com/CloudNationHQ/terraform-azure-pe/issues/47)) ([a57a34a](https://github.com/CloudNationHQ/terraform-azure-pe/commit/a57a34a6097d601f4faa1edafb415c217b39509a))
+* **deps:** bump golang.org/x/net from 0.33.0 to 0.36.0 in /tests ([#43](https://github.com/CloudNationHQ/terraform-azure-pe/issues/43)) ([346ab83](https://github.com/CloudNationHQ/terraform-azure-pe/commit/346ab83839f5cc649bbd49666fe6216fd2fb56c3))
+* **deps:** bump golang.org/x/net from 0.36.0 to 0.38.0 in /tests ([#45](https://github.com/CloudNationHQ/terraform-azure-pe/issues/45)) ([8517b16](https://github.com/CloudNationHQ/terraform-azure-pe/commit/8517b1649a2d0351b3bc8d1effa1e2bd812aaa35))
+* small refactor ([#48](https://github.com/CloudNationHQ/terraform-azure-pe/issues/48)) ([a4b49a3](https://github.com/CloudNationHQ/terraform-azure-pe/commit/a4b49a38ed2d6d9b895f3132eccf85f34321ed0a))
+
 ## [1.4.4](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.3...v1.4.4) (2025-01-30)
 
 
