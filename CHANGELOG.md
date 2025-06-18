@@ -14,6 +14,15 @@
 * **deps:** bump golang.org/x/net from 0.36.0 to 0.38.0 in /tests ([#45](https://github.com/CloudNationHQ/terraform-azure-pe/issues/45)) ([8517b16](https://github.com/CloudNationHQ/terraform-azure-pe/commit/8517b1649a2d0351b3bc8d1effa1e2bd812aaa35))
 * small refactor ([#48](https://github.com/CloudNationHQ/terraform-azure-pe/issues/48)) ([a4b49a3](https://github.com/CloudNationHQ/terraform-azure-pe/commit/a4b49a38ed2d6d9b895f3132eccf85f34321ed0a))
 
+### Upgrade from v1.4.4 to v2.0.0:
+
+- Update module reference to: `version = "~> 2.0"`
+- The property and variable resource_group is renamed to resource_group_name
+- The structure changed for private_service_connection
+- The structure changed for private_dns_zone_group
+
+See the usage examples for details
+
 ## [1.4.4](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.3...v1.4.4) (2025-01-30)
 
 
