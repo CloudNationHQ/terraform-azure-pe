@@ -1,37 +1,41 @@
 # private endpoints
 resource "azurerm_private_endpoint" "endpoint" {
-  for_each = {
-    for k, v in var.endpoints : k => merge(v, {
-      location             = try(v.location, var.location)
-      resource_group_name  = try(v.resource_group, var.resource_group)
-      private_dns_zone_ids = try(v.private_dns_zone_ids, [])
-      tags                 = try(v.tags, var.tags, {})
-      ip_configurations    = try(v.ip_configurations, {})
-    })
-  }
+  for_each = var.endpoints
+
+  resource_group_name = coalesce(
+    lookup(
+      each.value, "resource_group_name", null
+    ), var.resource_group_name
+  )
+
+  location = coalesce(
+    lookup(each.value, "location", null
+    ), var.location
+  )
 
   name                          = each.value.name
-  resource_group_name           = each.value.resource_group_name
-  location                      = each.value.location
   subnet_id                     = each.value.subnet_id
-  custom_network_interface_name = try(each.value.custom_network_interface_name, null)
-  tags                          = each.value.tags
+  custom_network_interface_name = each.value.custom_network_interface_name
+
+  tags = coalesce(
+    each.value.tags, var.tags
+  )
 
   private_service_connection {
-    name                              = each.key
-    is_manual_connection              = try(each.value.is_manual_connection, false)
-    private_connection_resource_id    = try(each.value.private_connection_resource_id, null)
-    subresource_names                 = try(each.value.subresource_names, null)
-    private_connection_resource_alias = try(each.value.private_connection_resource_alias, null)
-    request_message                   = try(each.value.request_message, null)
+    is_manual_connection              = each.value.private_service_connection.is_manual_connection
+    private_connection_resource_id    = each.value.private_service_connection.private_connection_resource_id
+    subresource_names                 = each.value.private_service_connection.subresource_names
+    private_connection_resource_alias = each.value.private_service_connection.private_connection_resource_alias
+    request_message                   = each.value.private_service_connection.request_message
+    name                              = each.value.private_service_connection.name
   }
 
   dynamic "private_dns_zone_group" {
-    for_each = length(each.value.private_dns_zone_ids) > 0 ? [1] : []
+    for_each = try(each.value.private_dns_zone_group, null) != null ? [each.value.private_dns_zone_group] : []
 
     content {
-      name                 = try(each.value.private_dns_zone_group_name, "default")
-      private_dns_zone_ids = each.value.private_dns_zone_ids
+      name                 = private_dns_zone_group.value.name
+      private_dns_zone_ids = private_dns_zone_group.value.private_dns_zone_ids
     }
   }
 
@@ -41,10 +45,15 @@ resource "azurerm_private_endpoint" "endpoint" {
     )
 
     content {
-      name               = ip_configuration.value.name
+      name = coalesce(
+        ip_configuration.value.name, try(
+          each.key, null
+        )
+      )
+
       private_ip_address = ip_configuration.value.private_ip_address
-      member_name        = try(ip_configuration.value.member_name, null)
-      subresource_name   = try(ip_configuration.value.subresource_name, null)
+      member_name        = ip_configuration.value.member_name
+      subresource_name   = ip_configuration.value.subresource_name
     }
   }
 }
