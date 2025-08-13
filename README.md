@@ -45,27 +45,27 @@ Type:
 map(object({
     name                          = string
     subnet_id                     = string
-    resource_group_name           = optional(string, null)
-    location                      = optional(string, null)
-    custom_network_interface_name = optional(string, null)
-    tags                          = optional(map(string), null)
+    resource_group_name           = optional(string)
+    location                      = optional(string)
+    custom_network_interface_name = optional(string)
+    tags                          = optional(map(string))
     private_service_connection = object({
       name                              = optional(string, "default")
       is_manual_connection              = optional(bool, false)
-      private_connection_resource_id    = optional(string, null)
-      subresource_names                 = optional(list(string), null)
-      private_connection_resource_alias = optional(string, null)
-      request_message                   = optional(string, null)
+      private_connection_resource_id    = optional(string)
+      subresource_names                 = optional(list(string))
+      private_connection_resource_alias = optional(string)
+      request_message                   = optional(string)
     })
     private_dns_zone_group = optional(object({
       name                 = optional(string, "default")
       private_dns_zone_ids = list(string)
-    }), null)
+    }))
     ip_configurations = optional(map(object({
-      name               = optional(string, null)
+      name               = optional(string)
       private_ip_address = string
-      member_name        = optional(string, null)
-      subresource_name   = optional(string, null)
+      member_name        = optional(string)
+      subresource_name   = optional(string)
     })), {})
   }))
 ```
