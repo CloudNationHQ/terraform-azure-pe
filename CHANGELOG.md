@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v2.0.0...v2.1.0) (2025-08-13)
+
+
+### Features
+
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#49](https://github.com/CloudNationHQ/terraform-azure-pe/issues/49)) ([aaecc78](https://github.com/CloudNationHQ/terraform-azure-pe/commit/aaecc784b80676db73233eb39585ae22bedcb99b))
+
+
+### Bug Fixes
+
+* enhance variable validation and remove redundant null defaults ([#50](https://github.com/CloudNationHQ/terraform-azure-pe/issues/50)) ([6ce0f33](https://github.com/CloudNationHQ/terraform-azure-pe/commit/6ce0f333c4cb8b755354f342d32f047d578be2b3))
+* enhance variable validation and remove redundant null defaults ([#52](https://github.com/CloudNationHQ/terraform-azure-pe/issues/52)) ([480acea](https://github.com/CloudNationHQ/terraform-azure-pe/commit/480acea024ad2063031e386fa800684bf47c0b39))
+* revert enhance variable validation and remove redundant null defaults (…" ([#51](https://github.com/CloudNationHQ/terraform-azure-pe/issues/51)) ([e0569f3](https://github.com/CloudNationHQ/terraform-azure-pe/commit/e0569f35215a31361bc22695983b1ff3db53911b))
+
 ## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v1.4.4...v2.0.0) (2025-06-18)
 
 
