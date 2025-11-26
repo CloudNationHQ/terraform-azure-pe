@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v2.1.0...v2.2.0) (2025-11-26)
+
+
+### Features
+
+* **deps:** bump github.com/ulikunitz/xz from 0.5.10 to 0.5.14 in /tests ([#55](https://github.com/CloudNationHQ/terraform-azure-pe/issues/55)) ([ccd5d6d](https://github.com/CloudNationHQ/terraform-azure-pe/commit/ccd5d6d108058f75a4416d654379efac1faea76b))
+* **deps:** bump golang.org/x/crypto from 0.36.0 to 0.45.0 in /tests ([#61](https://github.com/CloudNationHQ/terraform-azure-pe/issues/61)) ([4263401](https://github.com/CloudNationHQ/terraform-azure-pe/commit/4263401c70347783ede884593fe5cdc92c3e375c))
+* increment all module versions to the latest ([#63](https://github.com/CloudNationHQ/terraform-azure-pe/issues/63)) ([1e63b82](https://github.com/CloudNationHQ/terraform-azure-pe/commit/1e63b822ed780e8fdeb39bcf0bf356e5239c4ce5))
+
 ## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v2.0.0...v2.1.0) (2025-08-13)
 
 
