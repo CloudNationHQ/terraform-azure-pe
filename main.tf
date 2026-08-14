@@ -1,16 +1,13 @@
 # private endpoints
-resource "azurerm_private_endpoint" "endpoint" {
+resource "azurerm_private_endpoint" "this" {
   for_each = var.endpoints
 
   resource_group_name = coalesce(
-    lookup(
-      each.value, "resource_group_name", null
-    ), var.resource_group_name
+    each.value.resource_group_name, var.resource_group_name
   )
 
   location = coalesce(
-    lookup(each.value, "location", null
-    ), var.location
+    each.value.location, var.location
   )
 
   name                          = each.value.name
@@ -27,28 +24,24 @@ resource "azurerm_private_endpoint" "endpoint" {
     subresource_names                 = each.value.private_service_connection.subresource_names
     private_connection_resource_alias = each.value.private_service_connection.private_connection_resource_alias
     request_message                   = each.value.private_service_connection.request_message
-    name                              = each.value.private_service_connection.name
+    name                              = coalesce(each.value.private_service_connection.name, each.key)
   }
 
   dynamic "private_dns_zone_group" {
-    for_each = try(each.value.private_dns_zone_group, null) != null ? [each.value.private_dns_zone_group] : []
+    for_each = lookup(each.value, "private_dns_zone_group", null) != null ? { "this" = each.value.private_dns_zone_group } : {}
 
     content {
-      name                 = private_dns_zone_group.value.name
+      name                 = coalesce(private_dns_zone_group.value.name, each.key)
       private_dns_zone_ids = private_dns_zone_group.value.private_dns_zone_ids
     }
   }
 
   dynamic "ip_configuration" {
-    for_each = try(
-      each.value.ip_configurations, {}
-    )
+    for_each = lookup(each.value, "ip_configurations", {})
 
     content {
       name = coalesce(
-        ip_configuration.value.name, try(
-          each.key, null
-        )
+        ip_configuration.value.name, ip_configuration.key
       )
 
       private_ip_address = ip_configuration.value.private_ip_address
