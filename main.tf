@@ -28,7 +28,7 @@ resource "azurerm_private_endpoint" "this" {
   }
 
   dynamic "private_dns_zone_group" {
-    for_each = lookup(each.value, "private_dns_zone_group", null) != null ? { "this" = each.value.private_dns_zone_group } : {}
+    for_each = each.value.private_dns_zone_group != null ? { "this" = each.value.private_dns_zone_group } : {}
 
     content {
       name                 = coalesce(private_dns_zone_group.value.name, each.key)
@@ -37,7 +37,7 @@ resource "azurerm_private_endpoint" "this" {
   }
 
   dynamic "ip_configuration" {
-    for_each = lookup(each.value, "ip_configurations", {})
+    for_each = each.value.ip_configurations
 
     content {
       name = coalesce(
