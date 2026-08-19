@@ -93,7 +93,7 @@ module "private_endpoint" {
         vault = {
           subresource_name   = "vault"
           private_ip_address = "10.19.1.6"
-          member_name        = "vault"
+          member_name        = "default"
         }
       }
     }
