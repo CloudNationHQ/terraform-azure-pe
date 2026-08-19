@@ -21,8 +21,6 @@ module "network" {
   source  = "cloudnationhq/vnet/azure"
   version = "~> 10.0"
 
-  naming = local.naming
-
   vnet = {
     name                = module.naming.virtual_network.name
     location            = module.rg.groups.demo.location
