@@ -33,6 +33,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# Ignore lock files
-.terraform.lock.hcl
+# Ignore lock files in examples only — root lock file is tracked for reproducibility
 examples/**/.terraform.lock.hcl
