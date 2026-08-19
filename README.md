@@ -141,4 +141,4 @@ MIT Licensed. See [LICENSE](./LICENSE) for full details.
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/private-link/)
 - [Rest Api](https://learn.microsoft.com/en-us/rest/api/virtualnetwork/private-endpoints)
-- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/blob/main/specification/network/resource-manager/Microsoft.Network/stable/2023-09-01/privateEndpoint.json)
+- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/blob/main/specification/network/resource-manager/Microsoft.Network/Network/stable/2023-09-01/privateEndpoint.json)
