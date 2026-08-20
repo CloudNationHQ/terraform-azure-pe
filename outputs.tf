@@ -1,4 +1,4 @@
 output "endpoints" {
   description = "Contains all private endpoint configuration"
-  value       = azurerm_private_endpoint.endpoint
+  value       = azurerm_private_endpoint.this
 }
