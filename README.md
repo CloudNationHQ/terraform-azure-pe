@@ -17,19 +17,19 @@ The following requirements are needed by this module:
 
 - <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (~> 1.0)
 
-- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 4.0)
+- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 5.0)
 
 ## Providers
 
 The following providers are used by this module:
 
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 4.0)
+- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 5.0)
 
 ## Resources
 
 The following resources are used by this module:
 
-- [azurerm_private_endpoint.endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) (resource)
+- [azurerm_private_endpoint.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint) (resource)
 
 ## Required Inputs
 
@@ -50,7 +50,7 @@ map(object({
     custom_network_interface_name = optional(string)
     tags                          = optional(map(string))
     private_service_connection = object({
-      name                              = optional(string, "default")
+      name                              = optional(string)
       is_manual_connection              = optional(bool, false)
       private_connection_resource_id    = optional(string)
       subresource_names                 = optional(list(string))
@@ -58,7 +58,7 @@ map(object({
       request_message                   = optional(string)
     })
     private_dns_zone_group = optional(object({
-      name                 = optional(string, "default")
+      name                 = optional(string)
       private_dns_zone_ids = list(string)
     }))
     ip_configurations = optional(map(object({
@@ -141,4 +141,4 @@ MIT Licensed. See [LICENSE](./LICENSE) for full details.
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/private-link/)
 - [Rest Api](https://learn.microsoft.com/en-us/rest/api/virtualnetwork/private-endpoints)
-- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/blob/main/specification/network/resource-manager/Microsoft.Network/stable/2023-09-01/privateEndpoint.json)
+- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/blob/main/specification/network/resource-manager/Microsoft.Network/Network/stable/2023-09-01/privateEndpoint.json)
