@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v2.2.0...v3.0.0) (2026-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to azurerm v5 and align with CN module standards ([#69](https://github.com/CloudNationHQ/terraform-azure-pe/issues/69))
+
+### Features
+
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#67](https://github.com/CloudNationHQ/terraform-azure-pe/issues/67)) ([7743fe4](https://github.com/CloudNationHQ/terraform-azure-pe/commit/7743fe4e2d1f5737b793df9fa181918f05072736))
+* upgrade to azurerm v5 and align with CN module standards ([#69](https://github.com/CloudNationHQ/terraform-azure-pe/issues/69)) ([425ad7b](https://github.com/CloudNationHQ/terraform-azure-pe/commit/425ad7ba3ac7963352eb9a8f223bc2ddcdecc79b))
+
 ## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v2.1.0...v2.2.0) (2025-11-26)
 
 
