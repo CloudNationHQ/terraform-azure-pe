@@ -48,6 +48,7 @@ map(object({
     resource_group_name           = optional(string)
     location                      = optional(string)
     custom_network_interface_name = optional(string)
+    edge_zone                     = optional(string)
     tags                          = optional(map(string))
     private_service_connection = object({
       name                              = optional(string)
