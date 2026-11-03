@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v3.0.0...v3.1.0) (2026-11-03)
+
+
+### Features
+
+* add edge_zone to private endpoints ([#78](https://github.com/CloudNationHQ/terraform-azure-pe/issues/78)) ([a6ef2cc](https://github.com/CloudNationHQ/terraform-azure-pe/commit/a6ef2cc7b7d0d66470854d26b04a972f398f5b5e)), closes [#77](https://github.com/CloudNationHQ/terraform-azure-pe/issues/77)
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#75](https://github.com/CloudNationHQ/terraform-azure-pe/issues/75)) ([41b5166](https://github.com/CloudNationHQ/terraform-azure-pe/commit/41b5166435172ea553dd04eb827f6da2272f6111))
+* **deps:** bump github.com/klauspost/compress in /tests ([#76](https://github.com/CloudNationHQ/terraform-azure-pe/issues/76)) ([0e01227](https://github.com/CloudNationHQ/terraform-azure-pe/commit/0e01227efdfd1e9a854220b8848cb97c2462d75f))
+* **deps:** bump golang.org/x/crypto from 0.45.0 to 0.52.0 in /tests ([#71](https://github.com/CloudNationHQ/terraform-azure-pe/issues/71)) ([aed24e5](https://github.com/CloudNationHQ/terraform-azure-pe/commit/aed24e59de5a3fbdb565297269a05f2472d7ac0b))
+* **deps:** bump golang.org/x/net from 0.54.0 to 0.55.0 in /tests ([#73](https://github.com/CloudNationHQ/terraform-azure-pe/issues/73)) ([2b9aa20](https://github.com/CloudNationHQ/terraform-azure-pe/commit/2b9aa208611f108155ef676a41465643245b5f1b))
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#74](https://github.com/CloudNationHQ/terraform-azure-pe/issues/74)) ([8f7108d](https://github.com/CloudNationHQ/terraform-azure-pe/commit/8f7108d2948e0178141ef97929001733aee8cf5e))
+
 ## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-pe/compare/v2.2.0...v3.0.0) (2026-08-20)
 
 
