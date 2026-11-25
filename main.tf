@@ -13,6 +13,7 @@ resource "azurerm_private_endpoint" "this" {
   name                          = each.value.name
   subnet_id                     = each.value.subnet_id
   custom_network_interface_name = each.value.custom_network_interface_name
+  ip_version_type               = each.value.ip_version_type
   edge_zone                     = each.value.edge_zone
 
   tags = coalesce(
